@@ -1,0 +1,44 @@
+++++++++++++++++++++++++++++++++++++ Arduino 代码部分 ++++++++++++++++++++++++++++++++++++
+
+# 设置舵机ID号
+cd /Dual_servo_gimbal/Arduino/Arduino-ESP32_ID_setup/RoArm-M1-ESP32_ID_setup.ino
+
+# 设置舵机中位180°
+cd /Dual_servo_gimbal/Arduino/STSCL/CalibrationOfs/CalibrationOfs.ino
+
+# 实时打印舵机状态（Arduino串口调试）
+cd /Dual_servo_gimbal/Arduino/Arduino-M1-ESP32_state_print/Arduino-M1-ESP32_state_print.ino
+
+# 建立ESP32与上位机的数据传输（Python————串口透传）
+cd /Dual_servo_gimbal/Arduino/ESP32_feedback/ESP32_feedback.ino
+
+++++++++++++++++++++++++++++++++++++ Arduino 代码部分 ++++++++++++++++++++++++++++++++++++
+
+-----------------------------------------------------------------------------------------
+
+++++++++++++++++++++++++++++++++++++ Python 代码部分 +++++++++++++++++++++++++++++++++++++
+
+cd /Dual_servo_gimbal/Python/Servo_control
+
+# 恢复舵机初始位置
+python servo_sleep.py
+
+# 手动拖动舵机进行数据采集
+python servo_record_data_hdf5.py
+
+# 舵机数据重播
+python servo_replay_data_hdf5.py
+
+# IMU遥控舵机云台
+cd /Dual_servo_gimbal/Python/Servo_control/imu_control
+python imu_to_gimbal_teleop.py
+
+
+
+# 用舵机遥操作达妙电机
+cd /Dual_servo_gimbal/Python/DM_motor_control
+python DM_teleoperation_servo_to_motor_plot.py
+
+
+++++++++++++++++++++++++++++++++++++ Python 代码部分 +++++++++++++++++++++++++++++++++++++
+
