@@ -19,6 +19,7 @@ cd /Dual_servo_gimbal/Arduino/ESP32_feedback/ESP32_feedback.ino
 ++++++++++++++++++++++++++++++++++++ Python 代码部分 +++++++++++++++++++++++++++++++++++++
 
 cd /Dual_servo_gimbal/Python/Servo_control
+conda activate force_gripper
 
 # 恢复舵机初始位置
 python servo_sleep.py

@@ -19,7 +19,7 @@ from STservo_sdk import *
 # ================= 1. 硬件参数配置 =================
 BAUDRATE = 115200
 DEVICENAME = '/dev/ttyUSB0'  # Windows 请改为 'COMx'
-CAMERA_ID = 2
+CAMERA_ID = 0  # 2
 
 ID_PAN = 1
 ID_TILT = 2
