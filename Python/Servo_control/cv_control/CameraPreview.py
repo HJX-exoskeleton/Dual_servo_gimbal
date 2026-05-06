@@ -2,7 +2,7 @@ import cv2
 import time
 
 # 打开摄像头（索引为2的外接摄像头）
-capture = cv2.VideoCapture(2)
+capture = cv2.VideoCapture(0)
 
 # 设置视频编码格式为MJPG (使用标准宏定义替代数字 6)
 capture.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
